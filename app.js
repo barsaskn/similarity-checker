@@ -7,6 +7,9 @@ const cors = require('cors');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const cluster = require("cluster");
+const totalCPUs = require("os").cpus().length;
+
 
 var indexRouter = require('./routes/index');
 var similarityRouter = require('./routes/similarity');
